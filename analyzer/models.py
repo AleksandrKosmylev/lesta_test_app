@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+class Word(models.Model):
+    name = models.CharField(max_length=255, verbose_name='name')
+    tf = models.IntegerField(verbose_name='tf')
+    idf = models.IntegerField(verbose_name='idf')
