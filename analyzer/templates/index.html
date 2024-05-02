@@ -23,13 +23,13 @@
           <th>Jбратная частота документа, (idf)</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>###</td>
-          <td>###</td>
-          <td>###</td>
-        </tr>
-      </tbody>
+      {% for data in model_data %}
+      <tr>
+        <td class="fw-normal">{{ data.name }}</td>
+        <td class="fw-normal">{{ data.tf }}</td>
+        <td class="fw-normal">{{ data.idf }}</td>
+      </tr>
+      {% endfor %}
     </table>
     
   </div>
