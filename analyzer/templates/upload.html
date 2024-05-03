@@ -1,10 +1,15 @@
 {% extends 'index.html' %}
 
 {% block content %}
-  <h2>Upload</h2>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="file" name="document">
-    <button type="submit">Upload file</button>
-  </form>
+  <p></p>
+  <div class="container">
+    <h2>Загрузка файла</h2>
+  </div>
+  <div class="container">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="document">
+      <button type="submit"> Загрузить файл</button>
+    </form>
+  </div>
 {% endblock %}

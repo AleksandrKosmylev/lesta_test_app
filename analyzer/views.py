@@ -18,7 +18,7 @@ def index(request):
         fs.save(uploaded_file.name, uploaded_file)
         path = os.path.join(MEDIA_URL, uploaded_file.name)
         d = defaultdict(int)
-        with open(path, 'r') as my_file:
+        with open(path, 'r', encoding='utf-8') as my_file:
             for line in my_file:
                 for word in line.strip().split():
                     d[word] += 1
