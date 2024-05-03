@@ -29,6 +29,6 @@ def index(request):
         # Delete uploaded file
         os.remove(path)
 
-        model_data = Word.objects.values()
+        model_data = Word.objects.values()[:50]
         context['model_data'] = model_data
     return render(request, 'upload.html', context)
