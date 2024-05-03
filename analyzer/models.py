@@ -4,7 +4,7 @@ from django.db import models
 class Word(models.Model):
 
     class Meta:
-        ordering = ["id"]
+        ordering = ["-idf"]
 
     name = models.CharField(max_length=255, verbose_name='name')
     tf = models.IntegerField(verbose_name='tf')
